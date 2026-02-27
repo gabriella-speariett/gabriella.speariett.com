@@ -168,6 +168,7 @@ export const integ: IntegrationUserConfig = {
     emoji: ['bmoji', 'weibo'],
     // Refer https://waline.js.org/en/reference/client/props.html
     additionalConfigs: {
+      requiredMeta: ['nick'],
       // search: false,
       pageview: true,
       comment: true,
