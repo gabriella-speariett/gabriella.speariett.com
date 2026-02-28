@@ -23,7 +23,7 @@ export const FriendLinksSchema = () =>
         { name: 'Name', val: 'Astro Pure' },
         { name: 'Desc', val: 'Null' },
         { name: 'Link', val: 'https://astro-pure.js.org/' },
-        { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+        { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/alien.ico' }
       ],
       cacheAvatar: false
     })

@@ -13,7 +13,7 @@ const faviconTypeMap = {
 export const FaviconSchema = () =>
   z
     .string()
-    .default('/favicon/favicon.svg')
+    .default('/favicon/alien.ico')
     .transform((favicon, ctx) => {
       // favicon can be absolute or relative url
       const { pathname } = new URL(favicon, 'https://example.com')
