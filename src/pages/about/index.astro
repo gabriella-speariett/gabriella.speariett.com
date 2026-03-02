@@ -1,10 +1,18 @@
 ---
+import links from 'public/links.json'
+import config from 'virtual:config'
+
 import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
+import FriendList from '@/components/links/FriendList.astro'
+
+const { friends } = links
+const linksConf = config.integ.links
 const headings = [
+  { depth: 2, slug: 'links', text: 'Links' },
   { depth: 2, slug: 'hobbies', text: 'Hobbies' },
   { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
@@ -24,6 +32,15 @@ const headings = [
     Motto: To be continued. <Spoiler>这里可以夹私货，比如为什么要演奏春日影！</Spoiler>
   </p>
   <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' variant='ahead' />
+
+  <h2 id='links'>Links</h2>
+  <FriendList list={friends[0]} />
+  <Collapse title='Links with Bad Status'>
+    <FriendList list={friends[1]} />
+  </Collapse>
+  <Collapse title='Link History Book'>
+    <Timeline events={linksConf.logbook} />
+  </Collapse>
 
   {/* general-talk */}
   <h2 id='hobbies'>Hobbies</h2>
