@@ -37,5 +37,5 @@ node_modules/
 old_blog
 ignore.*
 bunfig.toml
-/src/content/blog/test.*
+/frontend/src/content/blog/test.*
 /test/
