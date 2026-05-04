@@ -46,72 +46,18 @@ const headings = [
 
   {/* tools */}
   <h2 id='tools'>Tools</h2>
-  <p>Current support tools as follow:</p>
-  <ToolSection
-    class='mb-5'
-    title='Design'
-    tools={[
-      {
-        name: 'Photoshop',
-        description: 'Picture Editing',
-        href: 'https://www.adobe.com/products/photoshop',
-        icon: import('@/assets/tools/photoshop.svg?raw')
-      },
-      {
-        name: 'Illustrator',
-        description: 'Vector Drawing',
-        href: 'https://www.adobe.com/products/illustrator',
-        icon: import('@/assets/tools/illustrator.svg?raw')
-      },
-      {
-        name: 'After Effects',
-        description: 'Motion Graphics',
-        href: 'https://www.adobe.com/products/aftereffects',
-        icon: import('@/assets/tools/aftereffects.svg?raw')
-      },
-      {
-        name: 'Premiere Pro',
-        description: 'Video Editing',
-        href: 'https://www.adobe.com/products/premiere',
-        icon: import('@/assets/tools/premiere.svg?raw')
-      }
-    ]}
-  />
-  <ToolSection
-    class='mb-5'
-    title='Productivity'
-    tools={[
-      {
-        name: 'Chrome',
-        description: 'Browser',
-        href: 'https://www.google.com/chrome/',
-        icon: import('@/assets/tools/chrome.svg?raw')
-      },
-      {
-        name: 'Firefox',
-        description: 'Browser',
-        href: 'https://www.mozilla.org/en-US/firefox',
-        icon: import('@/assets/tools/firefox.svg?raw')
-      },
-      {
-        name: 'Notion',
-        description: 'Note Taking',
-        href: 'https://www.notion.so/',
-        icon: import('@/assets/tools/notion.svg?raw')
-      },
-      {
-        name: 'Typora',
-        description: 'Markdown Editor',
-        href: 'https://typora.io/',
-        icon: import('@/assets/tools/typora.svg?raw')
-      }
-    ]}
-  />
+  <p>Current tools I use are as follow:</p>
   <ToolSection
     class='mb-5'
     title='Development'
     tools={[
       {
+        name: 'WezTerm',
+        description: 'Terminal Emulator',
+        href: 'https://wezfurlong.org/wezterm/',
+        icon: import('@/assets/tools/wezterm.svg?raw')
+      },
+            {
         name: 'VS Code',
         description: 'IDE',
         href: 'https://code.visualstudio.com/',
@@ -124,22 +70,161 @@ const headings = [
         icon: import('@/assets/tools/neovim.svg?raw')
       },
       {
-        name: 'Sublime Text',
-        description: 'IDE',
-        href: 'https://www.sublimetext.com/',
-        icon: import('@/assets/tools/sublime.svg?raw')
+        name: 'Fish Shell',
+        description: 'Shell',
+        href: 'https://fishshell.com/',
+        icon: import('@/assets/tools/fishshell.svg?raw')
+      },
+            {
+        name: 'GitHub',
+        description: 'Code Hosting',
+        href: 'https://github.com/',
+        icon: import('@/assets/tools/github.svg?raw')
+      },
+      {
+        name: 'GitLab',
+        description: 'Code Hosting',
+        href: 'https://gitlab.com/',
+        icon: import('@/assets/tools/gitlab.svg?raw')
       }
     ]}
   />
   <ToolSection
     class='mb-5'
+    title='Productivity'
+    tools={[
+      {
+        name: 'Zen',
+        description: 'Browser',
+        href: 'https://zen-browser.app/',
+        icon: import('@/assets/tools/zen.svg?raw')
+      },
+      {
+        name: 'Notion',
+        description: 'Note Taking',
+        href: 'https://www.notion.so/',
+        icon: import('@/assets/tools/notion.svg?raw')
+      },
+      {
+        name: 'Todoist',
+        description: 'Task Management',
+        href: 'https://todoist.com/',
+        icon: import('@/assets/tools/todoist.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Languages, Frameworks & Tools'
+    tools={[
+      {
+        name: 'Python',
+        description: 'Programming Language',
+        href: 'https://www.python.org/',
+        icon: import('@/assets/tools/python.svg?raw')
+      },
+      {
+        name: 'Bash',
+        description: 'Scripting Language',
+        href: 'https://www.gnu.org/software/bash/',
+        icon: import('@/assets/tools/bash.svg?raw')
+      },
+      {
+        name: 'uv',
+        description: "Python package manager",
+        href: 'https://uv.pypa.io/en/latest/',
+        icon: import('@/assets/tools/uv.svg?raw')
+      },
+      {
+        name: 'FastAPI',
+        description: 'Web Framework',
+        href: 'https://fastapi.tiangolo.com/',
+        icon: import('@/assets/tools/fastapi.svg?raw')
+      },
+      {
+        name: 'Flask',
+        description: 'Web Framework',
+        href: 'https://flask.palletsprojects.com/',
+        icon: import('@/assets/tools/flask.svg?raw')
+      },
+      {
+        name: 'Pydantic',
+        description: 'Data Validation',
+        href: 'https://pydantic-docs.helpmanual.io/',
+        icon: import('@/assets/tools/pydantic.svg?raw')
+      },
+      {
+        name: 'Docker',
+        description: 'Containerization',
+        href: 'https://www.docker.com/',
+        icon: import('@/assets/tools/docker.svg?raw')
+      },
+      {
+        name: 'PostgreSQL',
+        description: 'Database',
+        href: 'https://www.postgresql.org/',
+        icon: import('@/assets/tools/postgresql.svg?raw')
+      },
+      {
+        name: 'Redis',
+        description: 'Database',
+        href: 'https://redis.io/',
+        icon: import('@/assets/tools/redis.svg?raw')
+      },
+      {
+        name: 'Git',
+        description: 'Version Control',
+        href: 'https://git-scm.com/',
+        icon: import('@/assets/tools/git.svg?raw')
+      },
+      {
+        name: 'GitHub Actions',
+        description: 'CI/CD',
+        href: 'https://github.com/features/actions',
+        icon: import('@/assets/tools/github-actions.svg?raw')
+      },
+      {
+        name: 'Celery',
+        description: 'Task Queue',
+        href: 'https://docs.celeryq.dev/en/stable/',
+        icon: import('@/assets/tools/celery.svg?raw')
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='AI'
+    tools={[
+      {
+        name: 'Claude',
+        description: 'AI Assistant',
+        href: 'https://www.anthropic.com/claude',
+        icon: import('@/assets/tools/claude.svg?raw')
+      },
+      {
+        name: 'Gemini',
+        description: 'AI Assistant',
+        href: 'https://www.google.com/intl/en_ai/',
+        icon: import('@/assets/tools/gemini.svg?raw')
+      },
+      {
+        name: 'OpenAI',
+        description: 'AI Assistant',
+        href: 'https://chat.openai.com/',
+        icon: import('@/assets/tools/openai.svg?raw')
+      }
+    ]}
+  />
+
+  <ToolSection
+    class='mb-5'
     title='Environment'
     tools={[
       {
-        name: 'Arch Linux',
-        description: 'Linux Distribution',
-        href: 'https://archlinux.org/',
-        icon: import('@/assets/tools/archlinux.svg?raw')
+        name: 'Raspberry Pi',
+        description: 'Mini Computer',
+        href: 'https://www.raspberrypi.org/',
+        icon: import('@/assets/tools/raspberry-pi.svg?raw')
       },
       {
         name: 'Ubuntu 24.04 LTS',
@@ -148,14 +233,14 @@ const headings = [
         icon: import('@/assets/tools/ubuntu.svg?raw')
       },
       {
-        name: 'MacOS Tahoe',
-        description: 'MacBook Air',
+        name: 'MacOS Sequioa',
+        description: 'MacBook Air M3',
         href: 'https://www.apple.com/macos/',
         icon: import('@/assets/tools/apple.svg?raw')
       },
       {
         name: 'Windows 11',
-        description: 'Framework Laptop 16',
+        description: 'Secondary Computer',
         href: 'https://news.microsoft.com/windows11-general-availability/',
         icon: import('@/assets/tools/windows11.svg?raw')
       }
