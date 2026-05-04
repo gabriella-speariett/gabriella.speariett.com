@@ -1,5 +1,9 @@
 {
   "name": "gabriella-speariett-com",
+  "workspaces": [
+    "frontend",
+    "frontend/packages/*"
+  ],
   "scripts": {
     "dev": "npm run dev --prefix frontend",
     "build": "npm run build --prefix frontend",
