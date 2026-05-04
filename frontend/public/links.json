@@ -1,37 +1,26 @@
 {
-  "friends": [
+  "personal": [
     {
       "id_name": "cf-links",
       "desc": "Common links included in circle friends",
       "link_list": [
         {
-          "name": "Arthals' ink",
-          "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束",
-          "link": "https://arthals.ink/",
-          "avatar": "https://cdn.arthals.ink/Arthals.png"
+          "name": "LinkedIn",
+          "intro": "Connect with me",
+          "link": "https://www.linkedin.com/in/gabriellaspeariett/",
+          "avatar": "https://media.licdn.com/dms/image/v2/D4E03AQF7Up20W7-haQ/profile-displayphoto-crop_800_800/B4EZfZGL1iHgAI-/0/1751693967652?e=1779321600&v=beta&t=MVR7_kktA2W4LrxAQpYYK9TttA88o4ILCDq3NgagUq4"
         },
         {
-          "name": "CWorld Site",
-          "intro": "求知若愚，虚怀若谷",
-          "link": "https://cworld0.com/",
-          "avatar": "https://cravatar.cn/avatar/1ffe42aa45a6b1444a786b1f32dfa8aa?s=200"
-        }
-      ]
-    },
-    {
-      "id_name": "inactive-links",
-      "desc": "Inactive or rule-breaking friends",
-      "link_list": []
-    },
-    {
-      "id_name": "special-links",
-      "desc": "Other special links",
-      "link_list": [
-        {
-          "name": "Astro",
-          "intro": "The web framework for content-driven websites",
-          "link": "https://astro.build/",
-          "avatar": "https://avatars.githubusercontent.com/u/44914786?s=200&v=4"
+          "name": "Twitter",
+          "intro": "Rarely use this",
+          "link": "https://x.com/gabrielladevs",
+          "avatar": "https://pbs.twimg.com/profile_images/1762608140497960960/G_by6Kr3_400x400.jpg"
+        },
+         {
+          "name": "GitHub",
+          "intro": "All my projects",
+          "link": "https://github.com/gabriella-speariett",
+          "avatar": "https://avatars.githubusercontent.com/u/108570781?v=4"
         }
       ]
     }
