@@ -1,131 +1,106 @@
 ---
 import { Image } from 'astro:assets'
 
-import { Button, Collapse, Icon } from 'astro-pure/user'
+import { Collapse } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 
 const headings = [
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
+  { depth: 2, slug: 'current-projects', text: 'Current Projects' },
+  { depth: 2, slug: 'older-projects', text: 'Older Projects' },
 ]
 ---
-
 <PageLayout title='Projects' {headings} view>
-  {/* About astro-pure */}
-  <div class='not-prose flex justify-center'>
-    <a
-      href='/docs/advanced/about' target='_blank'
-      class='flex items-center gap-x-3 rounded-full border bg-background px-4 py-2 text-sm shadow-sm transition-shadow hover:shadow-md'
-    >
-      <span class='size-2 rounded-full bg-green-400'></span>
-      <p class='font-medium text-muted-foreground'>About Astro-Theme-Pure Project</p>
-    </a>
-  </div>
-  <p>Github Activities:</p>
+  <p>Please find below a list of my current and older projects, my older projects are not actively maintained or updated and were written before I had any professional experience.</p>
+  <h2 id='current-projects'>Current Projects</h2>
+  <ProjectSection
+    projects={[
+      {
+        name: '🔧 Centralised Configuration',
+        description: 'A place to store all my setup scripts and dotfiles',
+        links: [
+          { type: 'github', href: 'https://github.com/gabriella-speariett/dotty' },
+          { type: 'doc', href: '../blog/custom-configuration' },
+        ]
+      },
+      {
+        name: '🔖 Self-hosted Bookmarker',
+        description: 'Self hosting Wallabag to save and manage all my bookmarks',
+        links: [
+          { type: 'github', href: 'https://t3.ftcdn.net/jpg/05/20/48/46/360_F_520484683_j4f2om7llvZD1aoL9HPZ2LmDeWWZoWK0.jpg' },
+          // { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
+          // { type: 'doc', href: '../blog/self-hosting-a-bookmarker' }
+        ]
+      },
+      {
+        name: '📚 Custom Library',
+        description: 'A script to beautify pku course website',
+        links: [
+          { type: 'github', href: 'https://t3.ftcdn.net/jpg/05/20/48/46/360_F_520484683_j4f2om7llvZD1aoL9HPZ2LmDeWWZoWK0.jpg' },
+          // { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
+          // { type: 'doc', href: '../blog/self-hosting-a-bookmarker' }
+        ]
+      }
+    ]}
+  />
+  <Collapse title='GitHub Activity'>
+  <p>Note, I use a private GitLab professionally, so my GitHub activity does not reflect all my work.</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+      src='https://ghchart.rshah.org/659eb9/gabriella-speariett'
       alt='github activities'
       inferSize
       loading='lazy'
     />
   </p>
-  <p>
-    If you think it would be useful or interesting to collaborate on a project, you can donate to
-    support my work or contact me to discuss a project.
-  </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
-
-  <h2 id='programs'>Programs</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: '🎨 Astro Theme Pure',
-        description: 'A simple, fast and powerful blog & document theme built by Astro',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
-          { type: 'site', href: 'https://astro-pure.js.org/' },
-          { type: 'doc', href: 'https://astro-pure.js.org/docs/list' },
-          { type: 'release', href: 'https://www.npmjs.com/package/astro-pure' }
-        ]
-      },
-      {
-        name: '💄 PKU Art',
-        description: 'A script to beautify pku course website',
-        links: [
-          { type: 'github', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'doc', href: 'https://docs.arthals.ink/docs/pku-art' }
-        ]
-      }
-    ]}
-  />
-  <Collapse title='Some old projects'>
-    <ProjectSection
-      projects={[
-        {
-          name: '🧩 rehype-autolink-headings-simple',
-          description: 'A simple version of rehype-autolink-headings',
-          links: [
-            { type: 'github', href: 'https://github.com/cworld1/rehype-autolink-headings-simple' },
-            {
-              type: 'release',
-              href: 'https://www.npmjs.com/package/rehype-autolink-headings-simple'
-            }
-          ]
-        },
-        {
-          name: 'Gaussian NB',
-          description:
-            'Simulating the Parsimonious Bayesian Algorithm with Python and Finding the Probability Prediction of Breast Cancer ',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/gaussian-nb' }]
-        }
-      ]}
-    />
   </Collapse>
 
-  <h2 id='learnings'>Learnings</h2>
+  <h2 id='older-projects'>Older Projects</h2>
+    <p> Here are some of my older projects that I made with no work experience, but they might not be actively maintained or updated:</p>
   <ProjectSection
     class='my-2'
     projects={[
       {
-        name: 'R Learning',
-        description: 'Some notes and code about learning R language',
+        name: '📊 Interactive Dashboard Personal',
+        description: 'An interactive dashboard that auto collects data from multiple areas from my daily life including health & productivity.',
         links: [
-          { type: 'github', href: 'https://github.com/cworld1/r-learning' },
-          { type: 'site', href: 'https://cworld1.github.io/r-learning' }
+          { type: 'github', href: 'https://github.com/gabriella-speariett/Interactive-Dashboard' },
+          { type: 'doc', href: 'https://github.com/gabriella-speariett/Interactive-Dashboard/blob/main/README.md' }
+        ]
+      },       
+      {
+        name: '🔍 Google Jobs Scraper',
+        description: 'A web scraper built with Python, Selenium, and BeautifulSoup to extract job listsings from Google Jobs, featuring data cleaning and CSV export functionality.',
+        links: [
+          { type: 'github', href: 'https://github.com/gabriella-speariett/Web-Scraping/tree/main' },
+          { type: 'doc', href: 'https://github.com/gabriella-speariett/Web-Scraping/blob/main/readme.md' }
         ]
       },
       {
-        name: 'CS 213 Learning',
-        description: 'Notes, code and experiences for Introduction to Computer Systems course',
+        name: '🎵 DJ Flask App',
+        description: 'A Flask web application that allows DJs to take a seed track and find similar songs.',
         links: [
-          {
-            type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
-          }
+          { type: 'github', href: 'https://github.com/gabriella-speariett/DJ-Flask-App' },
+          { type: 'doc', href: 'https://github.com/gabriella-speariett/DJ-Flask-App/blob/main/README.md'  }
         ]
-      }
-    ]}
-  />
-
-  <h2 id='others'>Others</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'CWorld',
-        description: "CWorld's Github",
-        links: [{ type: 'github', href: 'https://github.com/cworld1' }]
       },
       {
-        name: 'Arthals',
-        description: 'Arthals Github',
-        links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
-      }
+        name: '📰 Political News',
+        description: 'A web application that aggregates and analyses political news articles.',
+        links: [
+          { type: 'github', href: 'https://github.com/gabriella-speariett/Political-News'},
+          { type: 'doc', href: 'https://github.com/gabriella-speariett/Political-News/blob/main/README.md'}
+        ]
+      },
+      {
+        name: '⚽ Premier League Dashboard',
+        description: 'A web application that aggregates and analyses Premier League data.',
+        links: [
+          { type: 'github', href: 'https://github.com/gabriella-speariett/Manchester-United' },
+          { type: 'doc', href: 'https://github.com/gabriella-speariett/Manchester-United/blob/main/README.md' }
+        ]
+      },
+      
     ]}
   />
 
