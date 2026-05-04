@@ -1,12 +1,8 @@
 {
   "name": "gabriella-speariett-com",
-  "workspaces": [
-    "frontend",
-    "frontend/packages/*"
-  ],
   "scripts": {
     "dev": "npm run dev --prefix frontend",
-    "build": "npm run build --prefix frontend",
+    "build": "cd frontend && npm install && npm run build",
     "frontend": "npm run dev --prefix frontend",
     "backend": "cd backend && uvicorn main:app --reload"
   }
